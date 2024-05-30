@@ -6,6 +6,10 @@
 # Inherit from sm8550-common
 $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 
+# Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.ishtar.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ishtar.rc \
+
 # Overlay
 PRODUCT_PACKAGES += \
     FrameworkResOverlayIshtar \
