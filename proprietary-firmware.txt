@@ -1,3 +1,6 @@
+## All firmware image files from this list,
+## are taken from miui_ISHTARGlobal_2.0.207.0.VMAMIXM
+
 abl.img;AB
 aop.img;AB
 aop_config.img;AB
