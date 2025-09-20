@@ -12,6 +12,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixups,
     lib_fixup_vendorcompat,
     lib_fixups_user_type,
     libs_proto_3_9_1,
@@ -29,7 +30,11 @@ namespace_imports = [
     'vendor/xiaomi/sm8550-common',
 ]
 
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_odm' if partition in ('odm', 'vendor') else None
+
 lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,('sqlite3'): lib_fixup_odm_suffix,
     libs_proto_3_9_1: lib_fixup_vendorcompat,
 }
 
@@ -49,13 +54,20 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     (
+        'odm/lib64/libTrueSight.so',
         'odm/lib64/libMiVideoFilter.so',
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_isSupported')
+        .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
         .clear_symbol_version('AHardwareBuffer_unlock'),
+    (
+        'odm/lib64/libwrapper_dlengine.so',
+    ): blob_fixup()
+        .add_needed('liblog.so'),
 }
 
 module = ExtractUtilsModule(
