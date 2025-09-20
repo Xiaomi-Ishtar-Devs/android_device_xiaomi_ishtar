@@ -8,19 +8,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from nuwa device
-$(call inherit-product, device/xiaomi/nuwa/device.mk)
+# Inherit from ishtar device
+$(call inherit-product, device/xiaomi/ishtar/device.mk)
 
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nuwa
-PRODUCT_DEVICE := nuwa
+PRODUCT_NAME := lineage_ishtar
+PRODUCT_DEVICE := ishtar
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := 2210132C
+PRODUCT_MODEL := 2304FPN6DC
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint=Xiaomi/nuwa/nuwa:15/AQ3A.240912.001/OS2.0.203.0.VMBCNXM:user/release-keys
+    BuildFingerprint=Xiaomi/ishtar/ishtar:15/AQ3A.240912.001/OS2.0.205.0.VMAMIXM:user/release-keys

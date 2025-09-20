@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/nuwa
+DEVICE_PATH := device/xiaomi/ishtar
 
 # Inherit from xiaomi sm8550-common
 include device/xiaomi/sm8550-common/BoardConfigCommon.mk
@@ -32,5 +32,5 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/nuwa/BoardConfigVendor.mk
+include vendor/xiaomi/ishtar/BoardConfigVendor.mk
 

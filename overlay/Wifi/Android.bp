@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "WifiResNuwa",
+    name: "WifiResIshtar",
     device_specific: true
 }

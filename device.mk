@@ -22,7 +22,7 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.nuwa.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nuwa.rc \
+    $(LOCAL_PATH)/init/init.ishtar.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.ishtar.rc \
     
 # IFAAService
 PRODUCT_PACKAGES += \
@@ -30,13 +30,13 @@ PRODUCT_PACKAGES += \
 
 # Overlay
 PRODUCT_PACKAGES += \
-    ApertureOverlayNuwa \
-    EuiccResNuwa \
-    FrameworkResOverlayNuwa \
-    SettingsOverlayNuwa \
-    SettingsProviderResNuwa \
-    SystemUIOverlayNuwa \
-    WifiResNuwa
+    ApertureOverlayIshtar \
+    EuiccResIshtar \
+    FrameworkResOverlayIshtar \
+    SettingsOverlayIshtar \
+    SettingsProviderResIshtar \
+    SystemUIOverlayIshtar \
+    WifiResIshtar
 
 # PowerShare
 $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/reverse_chg_mode)
@@ -55,4 +55,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/xiaomi/nuwa/nuwa-vendor.mk)
+$(call inherit-product, vendor/xiaomi/ishtar/ishtar-vendor.mk)

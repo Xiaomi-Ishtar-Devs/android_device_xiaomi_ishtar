@@ -5,7 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "ApertureOverlayNuwa",
-    sdk_version: "current",
+    name: "EuiccResIshtar",
     vendor: true,
 }
