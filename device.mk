@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service.st
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureOverlayIshtar \
