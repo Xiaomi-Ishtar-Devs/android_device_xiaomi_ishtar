@@ -45,5 +45,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Inherit from the miuicamera
+$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
+
 # Inherit from the proprietary version
 $(call inherit-product, vendor/xiaomi/ishtar/ishtar-vendor.mk)
