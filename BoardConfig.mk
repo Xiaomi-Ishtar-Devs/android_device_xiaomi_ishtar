@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/ishtar
 
+# NFC
+TARGET_USES_ST_NFC := true
+
 # Inherit from xiaomi sm8550-common
 include device/xiaomi/sm8550-common/BoardConfigCommon.mk
 
@@ -37,4 +40,3 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
 include vendor/xiaomi/ishtar/BoardConfigVendor.mk
-

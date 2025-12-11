@@ -67,9 +67,19 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libwrapper_dlengine.so',
     ): blob_fixup()
         .add_needed('liblog.so'),
+    (
+        'vendor/lib64/libstfactory-vendor.so'
+    ): blob_fixup()
+        .add_needed('libbase_shim.so'),
     'odm/lib64/hw/camera.xiaomi.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so')
         .replace_needed('libui.so', 'libui-v34.so'),
+    (
+        'odm/bin/hw/vendor.qti.camera.provider-service_64',
+        'odm/lib64/camx.provider-impl.so',
+        'odm/lib64/camera/plugins/com.xiaomi.plugin.mialgosnsc.so',
+        'odm/lib64/com.qti.feature2.anchorsync.so'
+    ): blob_fixup().replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }
 
 module = ExtractUtilsModule(

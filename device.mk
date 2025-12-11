@@ -19,6 +19,9 @@ TARGET_HAS_UDFPS := true
 PRODUCT_PACKAGES += \
     IFAAService
 
+# NFC
+TARGET_USES_ST_NFC := true
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureOverlayIshtar \
