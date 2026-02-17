@@ -54,7 +54,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup_shim.so'),
     (
         'odm/lib64/libTrueSight.so',
-        'odm/lib64/libMiVideoFilter.so',
+        'odm/lib64/libMiPhotoFilter.so',
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')

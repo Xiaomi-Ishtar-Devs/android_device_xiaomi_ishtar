@@ -23,4 +23,4 @@ PRODUCT_MODEL := 2304FPN6DC
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint=Xiaomi/ishtar/ishtar:15/AQ3A.240912.001/OS2.0.207.0.VMAMIXM:user/release-keys
+    BuildFingerprint=Xiaomi/ishtar/ishtar:16/BP2A.250605.031/OS3.0.4.0.WMACNXM:user/release-keys
