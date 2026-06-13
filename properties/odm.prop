@@ -11,3 +11,6 @@ persist.vendor.sys.fp.fod.size.width_height=246,246
 
 # USB
 vendor.usb.product_string=Xiaomi 13 Ultra
+
+# NFC
+ro.hardware.nfc=ST_NFC
