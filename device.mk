@@ -19,6 +19,9 @@ TARGET_HAS_UDFPS := true
 PRODUCT_PACKAGES += \
     IFAAService
 
+# MiuiCamera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
 # NFC
 TARGET_USES_ST_NFC := true
 
