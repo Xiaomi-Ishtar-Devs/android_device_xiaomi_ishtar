@@ -465,7 +465,4 @@
         -->
     <string name="config_mainBuiltInDisplayCutoutRectApproximation">M 0,0 H -42 V 122 H 42 V 0 H 0 Z</string>
 
-    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
-    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
-
 </resources>
