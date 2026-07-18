@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2026 The AviumUI Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<permissions>
+    <!-- The current GMS DeskClock APK uses com.android.deskclock while the
+         bundled Google allowlist still targets com.google.android.deskclock. -->
+    <privapp-permissions package="com.android.deskclock">
+        <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+        <permission name="android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS"/>
+    </privapp-permissions>
+</permissions>

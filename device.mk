@@ -33,6 +33,10 @@ $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 # NFC
 TARGET_USES_ST_NFC := true
 
+# Privileged permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-ishtar-gms.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-ishtar-gms.xml
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureOverlayIshtar \
