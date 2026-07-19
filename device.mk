@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
+# Camera
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.camera.overrideP010DataspaceToUnknown=true
+
 # NFC
 TARGET_USES_ST_NFC := true
 
